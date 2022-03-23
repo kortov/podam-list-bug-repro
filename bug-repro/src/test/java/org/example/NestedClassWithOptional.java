@@ -5,12 +5,12 @@ import java.util.Optional;
 
 public class NestedClassWithOptional {
     private final Optional<Integer> primitive;
-    private final Optional<SimpleClass> nestedField;
+    private final GenericClass<String> nestedField;
     private final List<Integer> nestedList;
 
     public NestedClassWithOptional(
         Optional<Integer> primitive,
-        Optional<SimpleClass> nestedField,
+        GenericClass<String> nestedField,
         List<Integer> nestedList
     ) {
         this.primitive = primitive;
@@ -22,7 +22,7 @@ public class NestedClassWithOptional {
         return primitive;
     }
 
-    public Optional<SimpleClass> getNestedField() {
+    public GenericClass<String> getNestedField() {
         return nestedField;
     }
 

@@ -13,7 +13,7 @@ class OptionalTest {
     void manufactureNestedClassWithOptional_PodamGenerated_Ok() {
         final NestedClassWithOptional sut = podamFactory.manufacturePojoWithFullData(NestedClassWithOptional.class);
         Assertions.assertTrue(sut.getPrimitive().get() instanceof Integer);
-        Assertions.assertTrue(sut.getNestedField().get().getField().get() instanceof String);
+        Assertions.assertTrue(sut.getNestedField().getField().get() instanceof String);
         Assertions.assertTrue(sut.getNestedList().get(0) instanceof Integer);
     }
 
